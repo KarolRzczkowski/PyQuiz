@@ -40,7 +40,10 @@ def QuizApp(correctanswer, wronganswer):
                 print(f"Wrong Answers Count: {wronganswers}")    
                 if wronganswers == 4:
                     print('You are stupid')
-                    break  
+                    pyautogui.moveTo(*coords)
+                    pyautogui.countdown(2)
+                    pyautogui.click()
+                
     except ValueError:
         print('Value Error')
     except Exception as e:
